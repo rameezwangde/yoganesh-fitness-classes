@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #FDFBF7;
+  --color-brand-bg-alt: #F3EFE6;
+  --color-brand-red-light: #3B82F6;
+  --color-brand-red-dark: #1E3A8A;
+  --color-brand-text: #0F172A;
+  --color-brand-text-muted: #475569;
+
+  --font-sans: "Inter", "Outfit", sans-serif;
+}
+
+@layer base {
+  html, body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--color-brand-red-light), var(--color-brand-red-dark));
+  }
+
+  .bg-gradient-primary {
+    background-image: linear-gradient(to right, var(--color-brand-red-light), var(--color-brand-red-dark));
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-gradient-x {
+    animation: gradient 4s ease-in-out infinite;
+    background-size: 200% auto;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite linear;
+  }
+
+  @keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+    will-change: transform;
+  }
+  
+  .group-hover-pause:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+}
