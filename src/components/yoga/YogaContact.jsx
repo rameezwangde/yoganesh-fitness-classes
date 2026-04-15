@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import TiltWrapper from '../ui/TiltWrapper'
 
 const YogaContact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -56,28 +55,10 @@ const YogaContact = () => {
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-red-dark/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
-                {/* Top Area: Image & Contact Cards */}
+                {/* Top Area: Contact Cards */}
                 <div className="mb-24 px-0 md:px-8">
-                    {/* Group Image Wrapper */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-12"
-                    >
-                        <TiltWrapper intensity={20} scaleOnHover={1.03} className="relative w-full h-[300px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group block">
-                            <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
-                            <img
-                                src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/group-e1750968404152.jpg"
-                                loading="lazy"
-                                alt="Yoganesh Focus Group"
-                                className="w-full h-full object-cover transform transition-transform duration-[2s] ease-out"
-                            />
-                        </TiltWrapper>
-                    </motion.div>
-
                     {/* Info Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 -mt-20 md:-mt-32 relative z-20 px-4 md:px-12 mx-auto max-w-6xl">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative z-20 px-4 md:px-12 mx-auto max-w-6xl">
                         {contactCards.map((card, idx) => (
                             <motion.div
                                 key={idx}
