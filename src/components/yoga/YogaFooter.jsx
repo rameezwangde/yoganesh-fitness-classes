@@ -23,8 +23,8 @@ const YogaFooter = ({ scrollToSection }) => {
                         <button onClick={() => scrollToSection('home')} className="flex items-center gap-4 text-brand-text mb-6 group text-left">
                             <img src="/logo.png" alt="Yoganesh Logo" loading="lazy" className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm" />
                             <div className="flex flex-col items-start leading-none text-left">
-                                <span className="text-2xl font-black tracking-widest text-brand-text leading-none">
-                                    <span className="transition-colors" style={{ color: '#3B82F6' }}>YOG</span>ANESH
+                                <span className="text-2xl font-black tracking-widest leading-none">
+                                    <span className="transition-colors" style={{ color: '#3B82F6' }}>YOGA</span><span className="transition-colors" style={{ color: '#000000' }}>NESH</span>
                                 </span>
                                 <span className="text-[10px] font-black tracking-[0.25em] uppercase text-brand-text-muted mt-1.5 leading-none">
                                     Fitness Classes

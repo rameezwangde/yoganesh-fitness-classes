@@ -170,32 +170,7 @@ const YogaAbout = () => {
                     {/* Fancy Glow */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red-dark/10 rounded-full blur-[80px] group-hover:bg-brand-red-dark/20 transition-all duration-700 pointer-events-none"></div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="relative z-10"
-                    >
-                        <h3 className="text-4xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight">
-                            Unite Your <br /> Body And Mind
-                        </h3>
-                        <div className="flex items-center gap-4 mb-8">
-                            <div className="h-[1px] w-8 bg-brand-red-light"></div>
-                            <FaLeaf className="text-brand-red-light text-xl" />
-                            <div className="h-[1px] w-8 bg-brand-red-light"></div>
-                        </div>
-                        <div className="relative rounded-[2rem] overflow-hidden aspect-[16/9] bg-black shadow-2xl border border-brand-text/10 group-hover:shadow-[0_20px_40px_rgba(192,0,0,0.15)] transition-all">
-                            <video
-                                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                                controls
-                                preload="metadata"
-                                controlsList="nodownload"
-                            >
-                                <source src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/05/Yoganesh-Health-Institute-02.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </motion.div>
+
 
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}

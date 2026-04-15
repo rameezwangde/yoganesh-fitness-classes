@@ -112,8 +112,8 @@ const YogaMudra = () => {
                         <button onClick={() => scrollToSection('home')} className="z-50 relative group flex items-center gap-3 md:gap-4 justify-start">
                             <img src="/logo.png" alt="Yoganesh Logo" className="h-10 md:h-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm" />
                             <div className="flex flex-col items-start leading-none text-left">
-                                <span className="text-xl md:text-2xl font-black tracking-widest text-brand-text leading-none">
-                                    <span style={{ color: '#3B82F6' }}>YOG</span>ANESH
+                                <span className="text-xl md:text-2xl font-black tracking-widest leading-none">
+                                    <span style={{ color: '#3B82F6' }}>YOGA</span><span style={{ color: '#000000' }}>NESH</span>
                                 </span>
                                 <span className="text-[8px] md:text-[10px] font-black tracking-[0.25em] uppercase text-brand-text-muted mt-1 md:mt-1.5 leading-none">
                                     Fitness Classes
@@ -184,7 +184,7 @@ const YogaMudra = () => {
                                             <img src="/logo.png" alt="Yoganesh Logo" className="h-10 w-auto shrink-0 object-contain" />
                                             <div className="flex flex-col items-start leading-none text-left">
                                                 <span className="font-black text-lg tracking-widest uppercase leading-none">
-                                                    <span style={{ color: '#3B82F6' }}>YOG</span>ANESH
+                                                    <span style={{ color: '#3B82F6' }}>YOGA</span><span style={{ color: '#000000' }}>NESH</span>
                                                 </span>
                                                 <span className="text-[8px] font-black tracking-[0.25em] uppercase text-brand-text-muted mt-1 leading-none">
                                                     Fitness Classes
