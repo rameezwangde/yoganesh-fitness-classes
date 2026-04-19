@@ -108,7 +108,7 @@ const YogaAbout = () => {
                         {[
                             { number: "5", text: "Skilled Trainers", icon: FaUserTie },
                             { number: "320", text: "Happy Clients", icon: FaUsers },
-                            { number: "365", text: "Days Active", icon: FaCalendarAlt },
+                            { number: "1318", text: "Days Active", icon: FaCalendarAlt },
                             { number: "9", text: "Awards Won", icon: FaTrophy }
                         ].map((stat, idx) => {
                             const StatIcon = stat.icon;
