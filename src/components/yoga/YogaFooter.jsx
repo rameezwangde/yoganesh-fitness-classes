@@ -77,15 +77,24 @@ const YogaFooter = ({ scrollToSection }) => {
                         </ul>
                     </div>
 
-                    {/* Divisions */}
+                    {/* Programs */}
                     <div className="lg:col-span-3">
                         <h4 className="text-brand-text font-black mb-8 uppercase tracking-widest text-xs flex items-center"><span className="w-4 h-[2px] bg-brand-red-light mr-3"></span> Programs</h4>
                         <ul className="space-y-4 flex flex-col">
-                            {['Yoga Training', 'Zumba Classes', 'Personal Coaching', 'Meditation Sessions', 'Flexibility Programs'].map((link, i) => (
+                            {[
+                                { name: 'Asthanga Yoga', id: 'asthanga-yoga' },
+                                { name: 'Power Yoga', id: 'power-yoga' },
+                                { name: 'Zumba', id: 'zumba' },
+                                { name: 'Aerial', id: 'aerial' },
+                                { name: 'Pilates', id: 'pilates' }
+                            ].map((item, i) => (
                                 <li key={i}>
-                                    <button className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group text-left cursor-pointer">
+                                    <button 
+                                        onClick={() => scrollToSection(item.id)}
+                                        className="text-brand-text-muted hover:text-brand-red-light transition-all duration-300 text-sm font-medium flex items-center group text-left cursor-pointer"
+                                    >
                                         <span className="w-1.5 h-1.5 rounded-full bg-brand-text/10 mr-3 group-hover:bg-brand-red-light group-hover:scale-150 transition-all duration-300"></span>
-                                        {link}
+                                        {item.name}
                                     </button>
                                 </li>
                             ))}

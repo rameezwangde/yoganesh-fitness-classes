@@ -68,6 +68,7 @@ const YogaServices = () => {
                     {services.map((service, idx) => (
                         <motion.a
                             key={idx}
+                            id={service.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}
                             href={service.url || channelLink}
                             target="_blank"
                             rel="noopener noreferrer"
