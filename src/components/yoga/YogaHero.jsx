@@ -215,7 +215,8 @@ const YogaHero = () => {
                             style={{
                                 x: useTransform(springX, [-0.5, 0.5], [-20, 20]),
                                 y: useTransform(springY, [-0.5, 0.5], [-20, 20]),
-                                scale: 1.1
+                                scale: 1.1,
+                                translateZ: 0
                             }}
                             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop"
                             alt="YOGANESH Fitness Setup"

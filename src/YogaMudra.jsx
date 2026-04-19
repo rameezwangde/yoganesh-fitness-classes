@@ -1,8 +1,10 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
+
+import Lenis from 'lenis'
 
 // Core Components (Eager Load for LCP)
 import YogaHero from './components/yoga/YogaHero'
@@ -23,7 +25,6 @@ const YogaMudra = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const [visible, setVisible] = useState(true)
-    const { scrollY } = useScroll()
 
     const navItems = [
         { id: 'home', label: 'Home' },
@@ -34,15 +35,43 @@ const YogaMudra = () => {
         { id: 'contact', label: 'Contact us' }
     ]
 
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious()
-        setScrolled(latest > 20)
-        if (latest > previous && latest > 150) {
-            setVisible(false)
-        } else {
-            setVisible(true)
+    // Smooth Scroll Initialization (Lenis)
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
         }
-    })
+
+        requestAnimationFrame(raf)
+
+        // Sync header state with Lenis scroll
+        lenis.on('scroll', ({ scroll, velocity, direction }) => {
+            setScrolled(scroll > 20)
+            
+            // Header visibility logic (Hide on scroll down, show on scroll up)
+            if (velocity > 0.5 && scroll > 150 && direction === 1) {
+                setVisible(false)
+            } else if (direction === -1 || scroll < 150) {
+                setVisible(true)
+            }
+        })
+
+        return () => {
+            lenis.destroy()
+        }
+    }, [])
 
     useEffect(() => {
         if (isMobileMenuOpen) {

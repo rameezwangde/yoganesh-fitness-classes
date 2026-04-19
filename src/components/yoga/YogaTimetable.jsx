@@ -12,7 +12,7 @@ const YogaTimetable = () => {
                     viewport={{ once: true }}
                     className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block"
                 >
-                    Time Table
+                    Timetable
                 </motion.span>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ const YogaTimetable = () => {
                     transition={{ delay: 0.1 }}
                     className="text-4xl md:text-5xl font-extrabold text-brand-text mb-6 leading-tight"
                 >
-                    Time Table <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">As Follow</span>
+                    Timetable <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">as Follows</span>
                 </motion.h2>
                 <div className="flex justify-center mb-8">
                     <div className="h-[1px] w-12 bg-gradient-to-l from-brand-red-light to-transparent"></div>

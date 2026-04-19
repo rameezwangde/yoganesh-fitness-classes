@@ -106,10 +106,10 @@ const YogaAbout = () => {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-red-light/5 rounded-full blur-[80px] pointer-events-none"></div>
 
                         {[
-                            { number: "3+", text: "Skilled Trainers", icon: FaUserTie },
-                            { number: "255+", text: "Happy Clients", icon: FaUsers },
+                            { number: "5", text: "Skilled Trainers", icon: FaUserTie },
+                            { number: "320", text: "Happy Clients", icon: FaUsers },
                             { number: "365", text: "Days Active", icon: FaCalendarAlt },
-                            { number: "17", text: "Awards Won", icon: FaTrophy }
+                            { number: "9", text: "Awards Won", icon: FaTrophy }
                         ].map((stat, idx) => {
                             const StatIcon = stat.icon;
                             return (
