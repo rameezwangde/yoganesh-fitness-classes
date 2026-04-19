@@ -5,13 +5,6 @@ import { FaInstagram, FaFacebookF, FaYoutube, FaWhatsapp, FaMapMarkerAlt, FaPhon
 const YogaFooter = ({ scrollToSection }) => {
     return (
         <footer className="bg-brand-bg-alt relative border-t border-brand-text/5 overflow-hidden">
-            {/* Massive Parallax Brand Watermark */}
-            <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] flex justify-center opacity-[0.02] pointer-events-none select-none z-0">
-                <span className="text-[120px] md:text-[250px] lg:text-[400px] font-black tracking-tighter text-brand-text whitespace-nowrap">
-                    YOGANESH
-                </span>
-            </div>
-
             {/* Glowing Top Border Line */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red-light/30 to-transparent"></div>
 
