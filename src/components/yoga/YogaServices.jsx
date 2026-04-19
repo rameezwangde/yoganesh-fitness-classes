@@ -3,19 +3,25 @@ import { motion } from 'framer-motion'
 import { FaLeaf } from 'react-icons/fa'
 
 const YogaServices = () => {
+    const channelLink = "https://www.youtube.com/channel/UCB95ewujlU5zM_wwKcALVCA";
+
     const services = [
-        { title: "Hath Yoga", desc: "Hatha Yoga balances mind and body through poses, breath control, and meditation.", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop" },
-        { title: "Restorative & Yin Yoga", desc: "Relaxing, gentle, deep stretching, mindfulness, healing, stress relief, slow-paced, meditative, rejuvenating, grounding.", img: "https://images.unsplash.com/photo-1593164842264-854604db2260?q=80&w=600&auto=format&fit=crop" },
-        { title: "Iyengar Yoga", desc: "Iyengar Yoga focuses on alignment, precision, props, flexibility, and strength.", img: "https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&w=600&auto=format&fit=crop" },
-        { title: "Flow or Vinyasa Yoga", desc: "Flow yoga, also known as Vinyasa, emphasizes movement, breath, flexibility, strength, balance, mindfulness, coordination, endurance, and relaxation.", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop" },
-        { title: "Hot & Bikram Yoga", desc: "Flow, Hot, and Bikram Yoga enhance flexibility, strength, detoxification, and mindfulness.", img: "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=600&auto=format&fit=crop" },
-        { title: "Asthanga Yoga", desc: "Ashtanga Yoga is a dynamic, disciplined practice focusing on breath, movement, and mindfulness.", img: "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?q=80&w=600&auto=format&fit=crop" },
-        { title: "Power Yoga", desc: "Power yoga is a dynamic, fast-paced practice that builds strength, flexibility, endurance, and mindfulness while promoting overall fitness and stress relief.", img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" },
-        { title: "Shuddhikriya", desc: "Shuddhikriya Yoga involves cleansing techniques to detoxify and purify the body.", img: "/shatkarma.png" },
-        { title: "Nutrition & Dietitian", desc: "Balance, wellness, mindful eating, nourishment, detox, vitality, holistic, healing, metabolism, harmony.", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop" },
-        { title: "Aerobic", desc: "Aerobic yoga combines movement, flexibility, energy, fun, rhythm, fitness, mindfulness, and balance.", img: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop" },
-        { title: "Aerial", desc: "Aerial yoga enhances flexibility, strength, balance, relaxation, and core stability.", img: "https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?q=80&w=600&auto=format&fit=crop" },
-        { title: "ZUMBA", desc: "Zumba in yoga combines dance, movement, flexibility, energy, fun, rhythm, fitness, mindfulness, and balance.", img: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=600&auto=format&fit=crop" }
+        { title: "Asthanga Yoga", desc: "A dynamic, disciplined practice focusing on breath, movement, and mindfulness to build internal heat and strength.", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/oGBIDJdrBX4?si=4GFTvEK-NcGYtPo1" },
+        { title: "Vinyasa Yoga", desc: "A creative form of yoga where poses are linked together with the breath in a flowing sequence.", img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/xpJJR6JaqeI?si=Fa9RLpbQXYuU3avT" },
+        { title: "Power Yoga", desc: "A fast-paced, fitness-based yoga style that builds muscle, increases heart rate, and boosts metabolism.", img: "/services-power.png", url: "https://youtu.be/U1cHGJYIwhA?si=X8734dGhyP0MWALK" },
+        { title: "Hatha & Yin Yoga", desc: "Combining active Hatha poses with slow, deep-stretching Yin sequences for physical and mental balance.", img: "https://images.unsplash.com/photo-1593164842264-854604db2260?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/X3rsfeP4gp8?si=AbGKjEvAWxX0tlXl" },
+        { title: "Restorative Yoga", desc: "A gentle, therapeutic style that uses props to support the body in long-held poses for deep relaxation.", img: "https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/VU6u-Fjtbd4?si=sDroybvjBRt4oCo_" },
+        { title: "Iyengar Yoga", desc: "Focused on structural alignment and precision through the use of props like blocks and straps.", img: "/services-iyengar.png", url: "https://youtu.be/FEqeeb02E80?si=GTYYkOkA_ryTcKcG" },
+        { title: "Kundalini Yoga", desc: "Awakening energy through specific sequences of movement, breathwork, chanting, and meditation.", img: "/services-kundalini.png", url: "https://youtu.be/Wj1oFA4xuOA?si=T92xmaxWiYpA2Qg1" },
+        { title: "Hot & Bikram Yoga", desc: "Practiced in a heated room to promote detoxification, deeper stretching, and cardiovascular health.", img: "/services-hot.png", url: "https://youtu.be/Xc3FOKlCXZM?si=CMrVAym7PuN1YpIl" },
+        { title: "Prenatal Yoga", desc: "Safe and effective yoga tailored for expectant mothers to support physical health and emotional well-being.", img: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/-3bvlFKeLRE?si=lJ8VX4q_UArn-oot" },
+        { title: "Chair Yoga", desc: "A gentle form of yoga practiced while sitting on a chair, making it accessible for all mobility levels.", img: "/services-chair.png", url: "https://youtu.be/ihcBeW0eMWc?si=46xiuvz7pMq9_zOB" },
+        { title: "Shuddhikriya", desc: "Cleansing techniques (Shatkarma) to purify the body, enhance immunity, and prepare for deeper practice.", img: "/services-shuddhikriya.png", url: "https://youtu.be/zrwitknugZo?si=UX5DlO5cD2XHzXrW" },
+        { title: "Nutrition & Dietitian", desc: "Expert guidance on mindful eating and personalized diet plans to fuel your fitness journey.", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/inEPlZZ_SfA?si=uo0OljnXROnbG09P" },
+        { title: "Zumba", desc: "A high-energy dance fitness program that combines Latin and international music with dance moves.", img: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=600&auto=format&fit=crop", url: "https://youtu.be/r8YJKIckP-E?si=j_RS6GGRnpU-TX5u" },
+        { title: "Aerial", desc: "Using a silk hammock to support the body, allowing for deeper stretches and inverted poses.", img: "https://i1.wp.com/bhamnow.com/wp-content/uploads/2020/03/aerial-yoga-via-be-studio-scaled.jpg?fit=2048%2C1366&ssl=1", url: "https://youtu.be/1tdX0DYK2Jk?si=PrmePl5h0yosFK0m" },
+        { title: "Pilates", desc: "Focusing on core strength, posture, and flexibility through controlled, precise movements.", img: "https://img.freepik.com/premium-photo/people-stretching-pilates-reformers_126745-3577.jpg?w=2000", url: "https://youtu.be/C2HX2pNbUCM?si=9R-Xb3N2_3vbT2jM" },
+        { title: "Bollywood Dance", desc: "A vibrant, high-energy dance style that blends traditional Indian forms with modern beats for a full-body workout.", img: "/services-bollywood.png", url: "https://youtu.be/lD1X-ODWhvg?si=3ui0QfW0Gfj0ypE6" }
     ];
 
     return (
@@ -60,13 +66,16 @@ const YogaServices = () => {
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
                     {services.map((service, idx) => (
-                        <motion.div
+                        <motion.a
                             key={idx}
+                            href={service.url || channelLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: (idx % 3) * 0.1, duration: 0.6 }}
-                            className="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-text/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(192,0,0,0.15)] transition-all duration-500 flex flex-col"
+                            className="group relative bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-text/5 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] transition-all duration-500 flex flex-col cursor-pointer"
                         >
                             <div className="relative h-64 w-full overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
@@ -89,12 +98,12 @@ const YogaServices = () => {
                                 <p className="text-brand-text-muted leading-relaxed font-medium mb-6">
                                     {service.desc}
                                 </p>
-                                <div className="flex items-center text-brand-red-light font-bold text-sm uppercase tracking-widest group-hover:tracking-[0.2em] transition-all duration-300 cursor-pointer">
-                                    <span className="mr-2">Explore</span>
+                                <div className="flex items-center text-brand-red-light font-bold text-sm uppercase tracking-widest group-hover:tracking-[0.2em] transition-all duration-300">
+                                    <span className="mr-2">Watch on YouTube</span>
                                     <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>

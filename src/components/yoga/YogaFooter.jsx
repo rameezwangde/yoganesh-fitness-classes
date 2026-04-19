@@ -36,7 +36,7 @@ const YogaFooter = ({ scrollToSection }) => {
                         </p>
                         <div className="flex space-x-4">
                             {[
-                                { icon: FaInstagram, url: "https://www.instagram.com/yogamudrafitnessclasses?igsh=cTN2Nm14YnEzdTAy" },
+                                { icon: FaInstagram, url: "https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw==" },
                                 { icon: FaFacebookF, url: "#" },
                                 { icon: FaYoutube, url: "#" }
                             ].map((social, i) => {
@@ -64,7 +64,6 @@ const YogaFooter = ({ scrollToSection }) => {
                                 { name: 'Home', id: 'home' },
                                 { name: 'About Us', id: 'about' },
                                 { name: 'Services', id: 'services' },
-                                { name: 'Testimonials', id: 'testimonials' },
                                 { name: 'FAQ', id: 'faq' },
                                 { name: 'Contact', id: 'contact' }
                             ].map((link, i) => (

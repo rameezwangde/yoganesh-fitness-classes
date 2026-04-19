@@ -32,7 +32,7 @@ const YogaCTA = ({ scrollToSection }) => {
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <button onClick={() => scrollToSection('contact')} className="px-10 py-4 bg-white text-brand-text hover:text-brand-red-dark font-black rounded-full shadow-[0_10px_40px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_50px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300 text-sm md:text-base uppercase tracking-wider relative overflow-hidden group/btn">
-                            <span className="relative z-10">Book a Free Trial</span>
+                            <span className="relative z-10">Contact Us</span>
                             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-brand-bg-alt to-white opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
                         </button>
                         <button onClick={() => scrollToSection('services')} className="px-10 py-4 border-2 border-white/50 text-white hover:bg-white/10 backdrop-blur-sm font-bold rounded-full transition-all duration-300 text-sm md:text-base uppercase tracking-wider hover:-translate-y-1">

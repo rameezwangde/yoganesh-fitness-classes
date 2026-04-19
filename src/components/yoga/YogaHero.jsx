@@ -272,15 +272,14 @@ const YogaHero = () => {
                                 className="absolute w-full h-full text-brand-text"
                             >
                                 <path id="circlePath" d="M 50, 50 m -34, 0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0" fill="transparent" />
-                                <text fontSize="10" fontWeight="900" letterSpacing="1.8" className="fill-brand-text">
+                                <text fontSize="11" fontWeight="900" letterSpacing="4.5" className="fill-brand-text">
                                     <textPath href="#circlePath" startOffset="0%">
-                                        • 365 DAYS ACTIVE • 365 DAYS ACTIVE
+                                        365 DAYS ACTIVE • 
                                     </textPath>
                                 </text>
                             </motion.svg>
-                            <div className="w-14 h-14 md:w-16 md:h-16 bg-brand-red-light text-white rounded-full flex flex-col items-center justify-center shadow-lg relative z-10 group-hover:scale-110 group-hover:bg-brand-red-dark transition-all duration-300">
-                                <span className="font-extrabold text-xl md:text-2xl leading-none">365</span>
-                                <span className="text-[9px] font-bold uppercase tracking-widest leading-none mt-0.5">Days</span>
+                            <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center shadow-lg relative z-10 group-hover:scale-110 transition-all duration-300 p-2.5 overflow-hidden">
+                                <img src="/logo.png" alt="Yoganesh Logo" className="w-full h-full object-contain" />
                             </div>
                         </div>
                     </motion.div>

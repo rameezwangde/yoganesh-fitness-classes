@@ -33,7 +33,7 @@ const YogaTimetable = () => {
             {/* Timetable Container */}
             <div className="max-w-6xl mx-auto space-y-6">
 
-                {/* Monday To Saturday */}
+                {/* Monday To Sunday */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const YogaTimetable = () => {
                     <div className="md:w-1/4 bg-gradient-to-br from-brand-red-light to-brand-red-dark p-8 flex items-center justify-center text-center relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-[40px] transform translate-x-1/2 -translate-y-1/2"></div>
                         <h3 className="text-2xl md:text-3xl font-black text-white relative z-10 leading-tight">
-                            Monday<br /><span className="text-sm font-medium tracking-widest uppercase opacity-80 mt-2 block">To</span>Saturday
+                            Monday<br /><span className="text-sm font-medium tracking-widest uppercase opacity-80 mt-2 block">To</span>Sunday
                         </h3>
                     </div>
                     <div className="md:w-3/4 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-3 gap-4 bg-brand-bg-alt">
@@ -65,61 +65,6 @@ const YogaTimetable = () => {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                {/* SUNDAY */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl border border-brand-text/5 hover:border-brand-red-light/30 transition-all duration-500 group"
-                >
-                    <div className="md:w-1/4 bg-gradient-to-br from-brand-red-light/80 to-brand-red-dark/80 p-8 flex items-center justify-center text-center relative overflow-hidden">
-                        <h3 className="text-2xl md:text-3xl font-black text-white relative z-10 tracking-wider">
-                            SUNDAY
-                        </h3>
-                    </div>
-                    <div className="md:w-3/4 p-6 md:p-8 flex flex-wrap gap-4 bg-brand-bg-alt items-center">
-                        {[
-                            "04:00 AM - 05:00 AM",
-                            "05:00 AM - 06:00 AM",
-                            "06:00 AM - 07:00 AM",
-                            "07:00 AM - 08:00 AM",
-                            "08:00 AM - 09:00 AM"
-                        ].map((time, idx) => (
-                            <div key={idx} className="bg-white rounded-xl px-5 py-3 border border-brand-text/5 shadow-sm hover:border-brand-red-light/50 hover:shadow-md transition-all flex items-center gap-2">
-                                <span className="text-brand-text font-bold text-[13px] sm:text-sm whitespace-nowrap">{time}</span>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                {/* ZUMBA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl border border-brand-text/5 hover:border-brand-red-light/30 transition-all duration-500 group shadow-brand-red-light/5"
-                >
-                    <div className="md:w-1/4 bg-brand-red-light p-8 flex items-center justify-center text-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-                        <h3 className="text-2xl md:text-3xl font-black text-white relative z-10 tracking-widest">
-                            ZUMBA
-                        </h3>
-                    </div>
-                    <div className="md:w-3/4 p-6 md:p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 bg-brand-bg-alt items-center">
-                        {[
-                            "Tuesday",
-                            "Thursday",
-                            "Saturday"
-                        ].map((day, idx) => (
-                            <div key={idx} className="bg-white rounded-2xl p-6 border border-brand-text/5 text-center shadow-sm hover:-translate-y-1 hover:shadow-lg transition-transform duration-300 flex items-center justify-center">
-                                <div className="text-brand-text font-black uppercase text-sm tracking-[0.2em]">{day}</div>
                             </div>
                         ))}
                     </div>

@@ -101,8 +101,8 @@ const YogaFAQ = () => {
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
                                 <div className="absolute inset-0 bg-brand-red-dark/10 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
                                 <img
-                                    src="https://yogamudrafitnessclasses.com/wp-content/uploads/2025/06/new11-e1750943845290.jpg"
-                                    alt="Yoganesh Class"
+                                    src="/yoga-faq.png"
+                                    alt="Yoganesh Yoga Class"
                                     loading="lazy"
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
                                 />
