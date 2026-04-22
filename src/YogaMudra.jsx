@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
+import { FaWhatsapp } from 'react-icons/fa'
 
 import Lenis from 'lenis'
 
@@ -268,6 +269,21 @@ const YogaMudra = () => {
                     <YogaContact />
                     <YogaFooter scrollToSection={scrollToSection} />
                 </Suspense>
+
+                {/* Floating WhatsApp Button */}
+                <motion.a
+                    href="https://wa.me/918422923924"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_15px_35px_rgba(37,211,102,0.6)] transition-shadow group"
+                >
+                    <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25 group-hover:animate-none"></div>
+                    <FaWhatsapp className="relative z-10" />
+                </motion.a>
             </main>
         </HelmetProvider>
     )

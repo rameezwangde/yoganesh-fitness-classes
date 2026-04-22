@@ -30,8 +30,9 @@ const YogaFooter = ({ scrollToSection }) => {
                         <div className="flex space-x-4">
                             {[
                                 { icon: FaInstagram, url: "https://www.instagram.com/yoganeshfitnessclasses?igsh=MTNwczhobHJsNXo1Nw==" },
-                                { icon: FaFacebookF, url: "#" },
-                                { icon: FaYoutube, url: "#" }
+                                { icon: FaFacebookF, url: "https://www.facebook.com/people/Yoganesh-Yoganesh/61577626003719/?sk=about" },
+                                { icon: FaYoutube, url: "https://www.youtube.com/channel/UC_QvF-Mg4a7K2zFBwPZqnlg" },
+                                { icon: FaWhatsapp, url: "https://wa.me/918422923924" }
                             ].map((social, i) => {
                                 const Icon = social.icon;
                                 return (
