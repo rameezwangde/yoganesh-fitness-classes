@@ -124,7 +124,7 @@ const YogaFooter = ({ scrollToSection }) => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-text/5 flex flex-col md:flex-row justify-between items-center relative z-10">
                     <p className="text-brand-text-muted text-xs mb-4 md:mb-0 font-medium tracking-wide">
-                        © {new Date().getFullYear()} YOGANESH FITNESS CLASSES. Powered By Excellence. All rights reserved.
+                        © {new Date().getFullYear()} YOGANESH FITNESS CLASSES. Developed by Rameez Wangde. All rights reserved.
                     </p>
                     <div className="flex space-x-8">
                         <span className="text-brand-text-muted text-xs font-semibold hover:text-brand-red-light transition-colors uppercase tracking-widest cursor-pointer">Privacy Policy</span>
