@@ -219,14 +219,7 @@ const YogaTestimonials = () => {
 
             <div className="container mx-auto px-4 relative z-10 mb-16">
                 <div className="text-center max-w-3xl mx-auto">
-                    <motion.span
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-brand-red-light font-bold text-sm tracking-[0.3em] uppercase mb-4 block"
-                    >
-                        Success Stories
-                    </motion.span>
+
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +227,7 @@ const YogaTestimonials = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-extrabold text-brand-text mb-6"
                     >
-                        Loved By <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Hundreds</span> In Ulwe
+                        Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red-light to-brand-red-dark">Success</span> Stories
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
