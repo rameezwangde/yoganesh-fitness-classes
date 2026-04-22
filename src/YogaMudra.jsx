@@ -18,6 +18,7 @@ const YogaTimetable = lazy(() => import('./components/yoga/YogaTimetable'))
 const YogaFAQ = lazy(() => import('./components/yoga/YogaFAQ'))
 const YogaCTA = lazy(() => import('./components/yoga/YogaCTA'))
 const YogaContact = lazy(() => import('./components/yoga/YogaContact'))
+const YogaTestimonials = lazy(() => import('./components/yoga/YogaTestimonials'))
 const YogaFooter = lazy(() => import('./components/yoga/YogaFooter'))
 
 const YogaMudra = () => {
@@ -265,6 +266,7 @@ const YogaMudra = () => {
                     <YogaServices />
                     <YogaTimetable />
                     <YogaFAQ />
+                    <YogaTestimonials />
                     <YogaCTA scrollToSection={scrollToSection} />
                     <YogaContact />
                     <YogaFooter scrollToSection={scrollToSection} />
