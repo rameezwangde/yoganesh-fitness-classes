@@ -31,6 +31,7 @@ const YogaMudra = () => {
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About' },
         { id: 'services', label: 'Services' },
+        { id: 'testimonials', label: 'Testimonials' },
         { id: 'faq', label: 'FAQ' },
         { id: 'contact', label: 'Contact us' }
     ]
@@ -112,7 +113,7 @@ const YogaMudra = () => {
     }
 
     return (
-        <HelmetProvider>
+        <>
             <Helmet>
                 <title>YOGANESH FITNESS CLASSES | Premium Training & Wellness</title>
                 <meta name="description" content="Welcome to Yoganesh Fitness Classes - A Complete Wellness Ecosystem. Train your body, strengthen your mind." />
@@ -287,7 +288,7 @@ const YogaMudra = () => {
                     <FaWhatsapp className="relative z-10" />
                 </motion.a>
             </main>
-        </HelmetProvider>
+        </>
     )
 }
 

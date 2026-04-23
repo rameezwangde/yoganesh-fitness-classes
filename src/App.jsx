@@ -1,13 +1,16 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import YogaMudra from './YogaMudra'
+import SuccessStories from './pages/SuccessStories'
 
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <YogaMudra />
+        <Routes>
+          <Route path="/" element={<YogaMudra />} />
+          <Route path="/success-stories" element={<SuccessStories />} />
+        </Routes>
       </BrowserRouter>
     </HelmetProvider>
   )
