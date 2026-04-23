@@ -27,6 +27,20 @@ const features = [
 ]
 
 const YogaAbout = () => {
+    const calculateDaysActive = () => {
+        // Start date: September 9, 2022
+        const startDate = new Date('2022-09-09T00:00:00');
+        const now = new Date();
+        
+        // Calculate the difference in milliseconds
+        const diffInMs = now.getTime() - startDate.getTime();
+        
+        // Convert to days and use floor to increment exactly at 12 AM
+        const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+        
+        return diffInDays.toString();
+    };
+
     return (
         <section id="about" className="py-24 md:py-32 bg-brand-bg relative overflow-hidden border-b border-brand-text/5">
             {/* Ambient glowing background */}
@@ -108,7 +122,7 @@ const YogaAbout = () => {
                         {[
                             { number: "5", text: "Skilled Trainers", icon: FaUserTie },
                             { number: "320", text: "Happy Clients", icon: FaUsers },
-                            { number: "1318", text: "Days Active", icon: FaCalendarAlt },
+                            { number: calculateDaysActive(), text: "Days Active", icon: FaCalendarAlt },
                             { number: "9", text: "Awards Won", icon: FaTrophy }
                         ].map((stat, idx) => {
                             const StatIcon = stat.icon;

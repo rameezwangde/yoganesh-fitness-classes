@@ -5,7 +5,7 @@ import { testimonials } from '../../constants/testimonials'
 
 const YogaTestimonials = () => {
     // Only show first 2 for the homepage preview
-    const previewTestimonials = testimonials.slice(0, 2);
+    const previewTestimonials = testimonials.slice(0, 1);
 
     return (
         <section id="testimonials" className="py-12 md:py-16 bg-brand-bg-alt relative overflow-hidden">
@@ -63,25 +63,6 @@ const YogaTestimonials = () => {
                             </div>
                         </div>
                     </motion.div>
-
-                    {/* Preview Grid (Only 1 more review as preview) */}
-                    {previewTestimonials.slice(1).map((t, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="bg-white rounded-[1.5rem] p-5 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] border border-brand-text/5 flex flex-col gap-4 hover:shadow-lg transition-all duration-300"
-                        >
-                            <div className="flex items-center gap-3 border-b border-brand-text/5 pb-3">
-                                <h4 className="text-base font-bold text-brand-text leading-tight">{t.name}</h4>
-                            </div>
-                            <p className="text-brand-text-muted text-sm leading-relaxed font-medium italic">
-                                "{t.content.length > 250 ? t.content.substring(0, 250) + "..." : t.content}"
-                            </p>
-                        </motion.div>
-                    ))}
                 </div>
 
                 <motion.div 
